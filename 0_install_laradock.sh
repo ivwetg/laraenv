@@ -67,7 +67,6 @@ date +'安装完docker:%Y年%m月%d日 %H:%M:%S' #输出来看下
     if [ ${exe_docker_compose} -lt 1 ];then
     {
         curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-        chmod +x /usr/local/bin/docker-compose
         if [ $? -eq 0 ]; then
             echo -e "`font_color green`成功安装docker-compose并修改权限：$?`font_color end`"
         else
@@ -76,9 +75,9 @@ date +'安装完docker:%Y年%m月%d日 %H:%M:%S' #输出来看下
     }
     else {
          echo -e "`font_color green`您已经安装软件:docker_compose`font_color end`"
-         chmod +x /usr/local/bin/docker-compose
          }
     fi
+    chmod +x /usr/local/bin/docker-compose
 date +'安装完docker_copose:%Y年%m月%d日 %H:%M:%S' #输出来看下
 
 #开始安装laradock
