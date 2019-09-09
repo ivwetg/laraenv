@@ -24,6 +24,11 @@ function font_color(){
 }
 
 date +'开始运行时间为:%Y年%m月%d日 %H:%M:%S' #输出来看下
+#提前定义项目路径
+project_path=$(cd `dirname $0`; pwd)
+project_name="${project_path##*/}"
+#echo $project_path
+#echo $project_name
 
 yum -y install wget
 cp /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup   #首先备份/etc/yum.repos.d/CentOS-Base.repo
@@ -62,8 +67,7 @@ systemctl enable docker
 docker version
 date +'安装完docker:%Y年%m月%d日 %H:%M:%S' #输出来看下
 #安装指定版本的docker-composer
-    path=$(cd `dirname $0`;pwd)
-    cd $path;
+    cd $project_path;
     cp ./software/docker-compose /usr/local/bin/docker-compose  #已下载好上传，现在复制过去就行了
     exe_docker_compose=`which docker-compose | grep -cE "."`;#执行看看什么结果
     if [ ${exe_docker_compose} -lt 1 ];then
