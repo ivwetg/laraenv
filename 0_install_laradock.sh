@@ -76,6 +76,7 @@ date +'安装完docker:%Y年%m月%d日 %H:%M:%S' #输出来看下
     }
     else {
          echo -e "`font_color green`您已经安装软件:docker_compose`font_color end`"
+         chmod +x /usr/local/bin/docker-compose
          }
     fi
 date +'安装完docker_copose:%Y年%m月%d日 %H:%M:%S' #输出来看下
