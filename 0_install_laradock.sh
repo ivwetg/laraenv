@@ -62,6 +62,7 @@ systemctl enable docker
 docker version
 date +'安装完docker:%Y年%m月%d日 %H:%M:%S' #输出来看下
 #安装指定版本的docker-composer
+    cp ./software/docker-compose /usr/local/bin/docker-compose  #已下载好上传，现在复制过去就行了
     exe_docker_compose=`which docker-compose | grep -cE "."`;#执行看看什么结果
     if [ ${exe_docker_compose} -lt 1 ];then
     {
