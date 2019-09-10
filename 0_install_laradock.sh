@@ -101,6 +101,7 @@ chown 1000.1000 ${web_workspace}/laradock -R #设置主人为laradock
 #WORKSPACE_INSTALL_WORKSPACE_SSH=false WORKSPACE_INSTALL_SSH2=false MYSQL_VERSION=latest MYSQL_ROOT_PASSWORD=root  #修改配置文件：mysql(要改成5.7) workspace(要开启ssh)
 sed -i 's/\(WORKSPACE_INSTALL_WORKSPACE_SSH=\).*/\1true/g' ${web_workspace}/laradock/.env
 sed -i 's/\(WORKSPACE_INSTALL_MYSQL_CLIENT=\).*/\1true/g' ${web_workspace}/laradock/.env
+sed -i 's/\(WORKSPACE_INSTALL_PYTHON=\).*/\1true/g' ${web_workspace}/laradock/.env
 sed -i 's/\(MYSQL_VERSION=\).*/\15.7/g' ${web_workspace}/laradock/.env
 sed -i 's/\(MYSQL_PASSWORD=\).*/\1sdr54dfas234fjaskdopm324/g' ${web_workspace}/laradock/.env
 sed -i 's/\(MYSQL_ROOT_PASSWORD=\).*/\1!@#$4321QWERrewq/g' ${web_workspace}/laradock/.env
