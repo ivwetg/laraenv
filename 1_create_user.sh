@@ -78,4 +78,4 @@ sed -i "\$aChrootDirectory ${USER_ROOT}"  /etc/ssh/sshd_config
 #echo "ChrootDirectory ${USER_ROOT}" >> /etc/ssh/sshd_config #用sed路径有问题，先不用，暂用>>代替
 
 #第七步：重启sshd
-service sshd restart
+service ssh restart
