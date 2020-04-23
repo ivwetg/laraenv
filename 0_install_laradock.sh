@@ -102,6 +102,9 @@ chown 1000.1000 ${web_workspace}/laradock -R #设置主人为laradock
 sed -i 's/\(WORKSPACE_INSTALL_WORKSPACE_SSH=\).*/\1true/g' ${web_workspace}/laradock/.env
 sed -i 's/\(WORKSPACE_INSTALL_MYSQL_CLIENT=\).*/\1true/g' ${web_workspace}/laradock/.env
 sed -i 's/\(WORKSPACE_INSTALL_PYTHON=\).*/\1true/g' ${web_workspace}/laradock/.env
+sed -i 's/\(WORKSPACE_INSTALL_XDEBUG=\).*/\1true/g' ${web_workspace}/laradock/.env
+sed -i 's/\(PHP_FPM_INSTALL_XDEBUG=\).*/\1true/g' ${web_workspace}/laradock/.env
+sed -i 's/\(PHP_FPM_INSTALL_MYSQL_CLIENT=\).*/\1true/g' ${web_workspace}/laradock/.env
 sed -i 's/\(MYSQL_VERSION=\).*/\15.7/g' ${web_workspace}/laradock/.env
 sed -i 's/\(MYSQL_PASSWORD=\).*/\1sdr54dfas234fjaskdopm324/g' ${web_workspace}/laradock/.env
 sed -i 's/\(MYSQL_ROOT_PASSWORD=\).*/\1!@#$4321QWERrewq/g' ${web_workspace}/laradock/.env
